@@ -1,2 +1,0 @@
-﻿CREATE USER [W_Sora] FOR LOGIN [W_Sora];
-
