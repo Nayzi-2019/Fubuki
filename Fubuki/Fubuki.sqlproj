@@ -129,5 +129,6 @@
   <ItemGroup>
     <Build Include="dbo\Tables\globalsetting.sql" />
     <Build Include="dbo\Stored Procedure\Sora_TestGlobalSettingConnect_21.02.sql" />
+    <Build Include="dbo\Stored Procedure\Sora_GetGlobalSetting_21.02.sql" />
   </ItemGroup>
 </Project>
