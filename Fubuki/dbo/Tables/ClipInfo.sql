@@ -7,8 +7,7 @@
     [status] INT NULL, 
     [title] NVARCHAR(200) NULL, 
     [remark] NVARCHAR(500) NULL, 
-    [relateId] INT NULL, 
-    [tagId] INT NULL, 
+    [duration] NVARCHAR(100) NULL, 
     [createTime] DATETIME NULL
     
 	

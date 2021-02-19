@@ -4,27 +4,28 @@
 	@uploadTime DATETIME, 
 	@status INT, 
 	@title NVARCHAR(200), 
-	@remark NVARCHAR(500)
+	@remark NVARCHAR(500),
+	@duration NVARCHAR(100)
 AS
 	Declare @clipId INT
 	Declare @tagId INT
 	Declare @relateId INT
 
-	select @clipId = [ID],@tagId = [tagId],@relateId = [relateId] from ClipInfo WITH(NOLOCK)
+	select @clipId = [ID]from ClipInfo WITH(NOLOCK)
 	where [url] = @url
 
 	IF @@ROWCOUNT = 0
 	BEGIN
-		INSERT INTO ClipInfo ([channelId],[url],[uploadTime],[status],[title],[remark],[createTime])
+		INSERT INTO ClipInfo ([channelId],[url],[uploadTime],[status],[title],[remark],[createTime],[duration])
 		values
-		(@channelId,@url,@uploadTime,@status,@title,@remark,GETDATE())
+		(@channelId,@url,@uploadTime,@status,@title,@remark,GETDATE(),@duration)
 		SET @clipId = scope_identity();
 
-		SELECT @clipId AS clipId, 1 as NewClip
+		SELECT @clipId AS Id, 1 as IsNew
 	END
 	ELSE
 	BEGIN
-		SELECT @clipId AS clipId, 0 as NewClip
+		SELECT @clipId AS Id, 0 as IsNew
 	END
 	
 	

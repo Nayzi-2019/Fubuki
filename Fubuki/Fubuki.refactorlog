@@ -7,4 +7,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="channelId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="41bab1a5-f4ac-415a-830e-0e198bc12c24" ChangeDateTime="02/19/2021 01:35:06">
+    <Property Name="ElementName" Value="[dbo].[RelateInfo].[RelateId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RelateInfo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TargetClipId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f71e54a0-8522-4ade-a7bf-8c7d749523e1" ChangeDateTime="02/19/2021 08:43:40">
+    <Property Name="ElementName" Value="[dbo].[ClipInfo].[relateId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ClipInfo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="duration" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fd17ccae-acdc-4523-9a9a-0788aa594aac" ChangeDateTime="02/19/2021 11:31:17">
+    <Property Name="ElementName" Value="[dbo].[TagInfo].[type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TagInfo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Tagtype" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="391baa34-5a9f-4fbd-8c8c-b756ee97dadc" ChangeDateTime="02/19/2021 11:31:22">
+    <Property Name="ElementName" Value="[dbo].[TagInfo].[Tagtype]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TagInfo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TagType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6400b414-4dec-4d79-88b7-7d7259f3573f" ChangeDateTime="02/19/2021 11:31:25">
+    <Property Name="ElementName" Value="[dbo].[TagInfo].[TagType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TagInfo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="tagType" />
+  </Operation>
 </Operations>
