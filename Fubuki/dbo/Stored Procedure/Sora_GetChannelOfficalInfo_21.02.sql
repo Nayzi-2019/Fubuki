@@ -1,10 +1,9 @@
-﻿CREATE PROCEDURE [dbo].[Sora_GetChannelInfo_21.02]
-	@channelId NVARCHAR(200)
+﻿CREATE PROCEDURE [dbo].[Sora_GetChannelOfficalInfo_21.02]
 AS
 
-	SELECT [Id],[channelId],[channelName],[lastUpdateTime],[remark],[isOffical],[channelIcon],[channelBanner]
+	SELECT [Id],[channelId],[channelName],[lastUpdateTime],[remark],[isOffical],[channelIcon]
 	FROM ChannelInfo WITH(NOLOCK)
-	WHERE [channelId] = @channelId
+	WHERE [isOffical] = 1
 RETURN 0
 
 

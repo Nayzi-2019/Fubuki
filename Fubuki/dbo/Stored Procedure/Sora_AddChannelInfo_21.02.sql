@@ -4,7 +4,8 @@
 	@lastUpdateTime DATETIME,
 	@remark NVARCHAR(500),
 	@isOffical BIT,
-	@channelIcon NVARCHAR(200)
+	@channelIcon NVARCHAR(200),
+	@channelBanner NVARCHAR(200)
 AS
 	Declare @Id INT
 --	Declare @tagId INT
@@ -16,9 +17,9 @@ AS
 	
 	IF @@ROWCOUNT = 0
 	BEGIN
-		INSERT INTO ChannelInfo ([channelId],[channelName],[lastUpdateTime],[remark],[isOffical],[channelIcon])
+		INSERT INTO ChannelInfo ([channelId],[channelName],[lastUpdateTime],[remark],[isOffical],[channelIcon],[channelBanner])
 		values
-		(@channelId,@channelName,@lastUpdateTime,@remark,@isOffical,@channelIcon)
+		(@channelId,@channelName,@lastUpdateTime,@remark,@isOffical,@channelIcon,@channelBanner)
 		SET @Id = scope_identity();
 
 		SELECT @Id AS Id, 1 as IsNew
@@ -26,7 +27,7 @@ AS
 	ELSE
 	BEGIN
 		UPDATE ChannelInfo	
-		SET [channelName] = @channelName, [lastUpdateTime] = @lastUpdateTime, [channelIcon] = @channelIcon, [remark] = @remark
+		SET [channelName] = @channelName, [lastUpdateTime] = @lastUpdateTime, [channelIcon] = @channelIcon, [channelBanner] = @channelBanner, [remark] = @remark
 		WHERE [Id] = @Id
 
 		SELECT @Id AS Id, 0 as IsNew

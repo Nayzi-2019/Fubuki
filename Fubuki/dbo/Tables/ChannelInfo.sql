@@ -6,5 +6,6 @@
     [lastUpdateTime] DATETIME NULL, 
     [remark] NVARCHAR(500) NULL, 
     [isOffical] BIT NULL, 
-    [channelIcon] NVARCHAR(200) NULL
+    [channelIcon] NVARCHAR(200) NULL, 
+    [channelBanner] NVARCHAR(200) NULL
 )

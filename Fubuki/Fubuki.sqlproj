@@ -138,6 +138,14 @@
     <Build Include="dbo\Tables\RelateInfo.sql" />
     <Build Include="dbo\Stored Procedure\Sora_AddRelateInfo_21.02.sql" />
     <Build Include="dbo\Stored Procedure\Sora_GetAllClipInfo_21.02.sql" />
+    <Build Include="dbo\Tables\TagInfo.sql" />
+    <Build Include="dbo\Stored Procedure\Sora_AddTagInfo_21.02..sql" />
+    <Build Include="dbo\Stored Procedure\Sora_GetTagInfoWithClipId_21.02.sql" />
+    <Build Include="dbo\Stored Procedure\Sora_GetRelateClipWithClipId_21.02.sql" />
+    <Build Include="dbo\Stored Procedure\Sora_GetChannelInfo_21.02.sql" />
+    <Build Include="dbo\Stored Procedure\Sora_DisableClipInfoWithClipId_21.02.sql" />
+    <Build Include="dbo\Stored Procedure\Sora_EnableClipInfoWithClipId_21.02.sql" />
+    <Build Include="dbo\Stored Procedure\Sora_GetAllClipInfoWithChannel_21.02.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Fubuki.refactorlog" />
